@@ -9,14 +9,10 @@ class DatabaseModel
     }
 
     public function connect(){
-        $this->db = new PDO('mysql:host=127.0.0.1;dbname=quizapp;charset=utf8', 'root', 'mysql');
+        $this->db = new PDO('mysql:host=127.0.0.1;dbname=quizapp;charset=utf8', 'xxx', 'xxx');
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-//        $this->db = new PDO('mysql:host=127.0.0.1;dbname=nyta00;charset=utf8', 'nyta00', 'ae3Aib4poeM9hei7ca');
-//        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-
-        //ae3Aib4poeM9hei7ca
     }
 
 //    public function disconnect(){
