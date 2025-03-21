@@ -1,21 +1,13 @@
 <?php
 session_start();
 
-// Include necessary files
 include 'header.php';
 include 'checkLogin.php';
 
 require_once __DIR__.'/UserRepository.php';
 $userRepository = new UserRepository();
 
-//var_dump($_SESSION);exit; //array(3) { ["uzivatel_id"]=> string(2) "31" ["uzivatel_email"]=> string(13) "user@email.cz" ["uzivatel_username"]=> string(4) "User" }
-
 $userInfo = $userRepository->selectUser($_SESSION['uzivatel_email'])[0];
-//var_dump($userInfo);exit; //array(7) { ["id"]=> string(2) "31" ["username"]=> string(4) "User" ["email"]=> string(13) "user@email.cz"
-// ["password"]=> string(60) "$2y$10$cd21UFvKQXYyPBTKHmPsHe2.Fx8fSPrveXcayNGgHBBBvnlabe4ce" ["role"]=> NULL
-// ["created_at"]=> string(19) "2024-06-09 12:28:08" ["updated_at"]=> string(19) "2024-06-09 12:29:32" }
-
-
 
 $errors = [];
 
@@ -25,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($_POST['current_password']) || empty($_POST['new_password']) || empty($_POST['confirm_password'])) {
         $errors[] = 'Vyplňte všechny pole';
     } else {
-//    $user = $userRepository->selectUser($_SESSION['uzivatel_email']);
         if (!password_verify($_POST['current_password'], $userInfo['password'])) {
             $errors[] = 'Aktuální heslo je špatně.';
         }
