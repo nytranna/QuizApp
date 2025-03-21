@@ -43,39 +43,6 @@ if(!empty($_SESSION['uzivatel_id'])){
     }
 }
 
-//-----
-//
-//$ids = [];
-//
-//foreach ($questions as $question) {
-//    $ids[] = $question['id'];
-//}
-//
-//
-//if (isset($_GET['question_id'])) {
-//    $id = htmlspecialchars($_GET['question_id']);
-//
-//
-//    if (in_array($id, $ids)) {
-//
-//        $questionData = $questionRepository->selectQuestionId($id);
-//
-//        $categoryId = $questionData[0]['category_id'];
-//
-//        $category = $categoryRepository->selectCategory();
-//
-//        $categoryName = null;
-//
-//        foreach ($category as $c) {
-//            if ($c['id'] == $categoryId) {
-//                $categoryName = htmlspecialchars($c['name']);
-//            }
-//        }
-//
-//    }
-//}
-
-//-----
 
 
 $category = $categoryRepository->selectCategory();
