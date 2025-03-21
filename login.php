@@ -37,44 +37,7 @@ if(!empty($_POST['email'])){
 }
 
 
-////-----
-//require_once '/google-api-php-client-main/autoload.php';
-//
-//
-//// Inicializace Google API klienta
-//require_once 'vendor/autoload.php'; // Importuje Google API klienta
-//$client = new Google_Client();
-//$client->setAuthConfig('credentials.json'); // Nastaví cestu k vašemu JSON souboru s OAuth klientem
-//$client->addScope(Google_Service_PeopleService::USERINFO_EMAIL); // Přidá požadovaný rozsah (scope)
-//
-//// Pokud uživatel klikne na přihlašovací odkaz, přesměrujte ho na Google OAuth autorizační stránku
-//if (!isset($_GET['code'])) {
-//    $auth_url = $client->createAuthUrl();
-//    header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
-//} else {
-//    // Zpracování autorizačního kódu po návratu z Google OAuth autorizační stránky
-//    $client->fetchAccessTokenWithAuthCode($_GET['code']);
-//    $token = $client->getAccessToken();
-//
-//    // Získání informací o přihlášeném uživateli
-//    $oauth2 = new Google_Service_Oauth2($client);
-//    $userInfo = $oauth2->userinfo->get();
-//
-//    // Zde můžete provést další akce, například ověření uživatele v databázi nebo vytvoření nového účtu
-//
-//    // Výpis informací o přihlášeném uživateli (pouze pro účely testování)
-//    echo '<pre>';
-//    print_r($userInfo);
-//    echo '</pre>';
-//}
-//
-//
-////----
-
-
 ?>
-
-
         <div class="container">
             <div class="row justify-content-md-center mt-lg-5">
                 <div class="col-md-5">
