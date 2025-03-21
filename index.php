@@ -7,43 +7,7 @@ include 'header.php';
 require_once __DIR__.'/QuizRepository.php';
 $quizRepository = new QuizRepository();
 
-//$selectUser = $databaseModel->query('SELECT * FROM user WHERE username=?', ["peta"]);
-//$userRepository->insertUser(["username" => "anicka", "email" => "anicka@an.en", "role" => "admin", "password" => "password"]);
-//$userRepository->updateUser(['email' => 'anicka@vse.cz'], ['username' => 'anicka']);
-//$userRepository->deleteUser(['username' => 'anicka']);
-
-//$databaseModel->insert("user", [
-//    "username" => "anna",
-//    "email" => "anna@vse.cz",
-//    "role" => "admin",
-//    "password" => "password"
-//]);
-//
-//
-//$databaseModel->update("user",[
-//    "email" => "anicka@vse.cz",
-//], [
-//    "username" => "anna"
-//] );
-//
-//
-//$databaseModel->delete("user", [
-//    "username" => "anna"
-//]);
-
-//$question = $quizRepository->selectQuestion(1); - vrací otázku a odpovedi podle quiz_question_id
-
-//$quiz = $quizRepository->selectQuiz(1);
-
 $allQuizzes =  $quizRepository->selectAllQuizzes();
-
-//$allIDs = [];
-//
-//foreach ($allQuizzes as $quiz){
-//    $allIDs[] = $quiz['id'];
-//}
-
-
 
 ?>
 
